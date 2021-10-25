@@ -282,6 +282,9 @@ h2 span{
 .slider .slides .top-stories__slider-image figure {
     margin: 0;
 }
+.slider .slides .top-stories__slider-image figure img{
+    aspect-ratio: 525 / 350;;
+}
 
 .slider .slides .top-stories__slider-content {
     position: absolute;
@@ -437,6 +440,7 @@ h2 span{
     width: 101px;
     /* height: 67px; */
     margin-right: 12px;
+    aspect-ratio: 101/67;
 }
 
 .editors-pick--articles li a:hover, .trending-now--articles li a:hover{
@@ -454,6 +458,7 @@ h2 span{
 
 .multimedia--image figure img {
     width: 100%;
+    aspect-ratio: 320 / 213;
 }
 
 .multimedia--image .caption {
@@ -506,6 +511,7 @@ h2 span{
 .category .category-article img, .latest-videos .latest-videos-list img{
     width: 100%;
     /* height: 125px; */
+    aspect-ratio: 188 / 125;
 }
 
 .category .category-article .label-tag {
@@ -567,6 +573,7 @@ h2 span{
     height: auto;
     width: 100%;
     max-width: 100%;
+    aspect-ratio: 320 / 213;
 }
 
 .tagged-content .col-1 .featured-tagged-article a {
@@ -635,6 +642,7 @@ h2 span{
     width: 30%;
     /* height: 74px; */
     margin-right: 16px;
+    aspect-ratio: 111 / 74;
 }
 
 .latest-videos .latest-videos-list .latest-video figure{
@@ -701,6 +709,7 @@ h2 span{
 .category-list li a img, .classified-odd-news li a img{
     width: 100%;
     /* height:123px; */
+    aspect-ratio: 190 / 127;
 }
 
 .category-list li, .classified-odd-news .more-news li {
@@ -747,6 +756,7 @@ h2 span{
 
 .digital-specials-news figure img {
     width: 100%;
+    aspect-ratio: 163 / 109;
 }
 
 .digital-specials-news {
@@ -776,6 +786,8 @@ h2 span{
 
 .patrol-ph-main-headline .other-featured a img{
     padding-bottom: 8px;
+    aspect-ratio: 298 / 198;
+    width:100%;
 }
 
 
@@ -826,11 +838,6 @@ h2 span{
 .news-link--gray a{
     display: flex;
     color: #d0d0d0;
-}
-.patrol-ph-main-headline .other-featured img{
-    width: 100%;
-    /* height: 98px; */
-    margin-right: 16px;
 }
 
 .sticky {
