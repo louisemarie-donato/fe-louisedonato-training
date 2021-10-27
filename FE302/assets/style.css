@@ -1199,10 +1199,11 @@ form label {
 }
 
 .story-article {
-    display: flex;
+    /* display: flex; */
     font-family: 'Libre Franklin', sans-serif;
     padding: 20px 0;
     border-bottom: solid 1px #e6e6e6;
+    grid-template-columns: minmax(min-content,auto) minmax(min-content,1fr);
 }
 
 .story-article figure img {
@@ -1293,6 +1294,10 @@ form label {
 
     .grid--footer {
         grid-template-columns: repeat(2, auto) !important;
+    }
+
+    .story-article {
+        grid-template-columns: 1fr;
     }
 }
 
