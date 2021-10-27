@@ -81,12 +81,12 @@ footer {
     border-top: 2px solid #f1f1f1;
 }
 
-footer .top-footer {
+/* footer .top-footer {
     margin: 20px auto;
     display: flex;
     max-width: 1167px;
     justify-content: space-between;
-}
+} */
 
 footer .footer-logo img {
     width:90px;
@@ -490,7 +490,7 @@ h2 span{
     border-width: 2px 2px 0 0;
 }
 
-.category .category-articles, .latest-videos .latest-videos-list{
+/* .category .category-articles, .latest-videos .latest-videos-list{
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -498,7 +498,7 @@ h2 span{
 
 .category .category-articles .category-article, .latest-videos .latest-videos-list .category-article--video{
     width: 16%;
-}
+} */
 
 .category .category-article figure, .latest-videos .latest-videos-list figure {
     position: relative;
@@ -532,7 +532,7 @@ h2 span{
     width: 100%;
 }
 
-.col-3-news {
+/* .col-3-news {
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
@@ -546,7 +546,7 @@ h2 span{
 .col-3-content .col-1, .col-3-content .col-2 {
     border-right: 2px solid #fff;
     padding-right: 16px;
-}
+} */
 
 .tagged-content .col-1 .featured-tagged-article {
     display: flex;
@@ -846,6 +846,41 @@ h2 span{
     top:0;
 }
 
+/* GRID */
+
+.grid {
+    display: grid;
+    grid-gap: 8px;
+}
+
+.grid--category-articles, .grid--latest-videos {
+    grid-template-columns: repeat(
+        auto-fill, 
+        minmax(206px, auto)
+        );
+}
+
+.grid--col-3-news {
+    grid-gap: 16px;
+    grid-template-columns: repeat(3,auto);
+    padding-bottom: 16px;
+}
+
+.grid--featured-articles {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(38%,auto));
+}
+
+.grid--footer {
+    margin: 8px;
+    grid-template-columns: repeat(auto-fill, minmax(15%,auto));
+}
+
+.grid-comments {
+    grid-template-columns: minmax(min-content,auto) minmax(min-content,1fr);
+}
+
+
 /* ARTICLE DETAIL PAGE */
 
 .breadcrumbs {
@@ -1040,7 +1075,7 @@ form label {
 }
 
 .comments {
-    display: flex;
+    /* display: flex; */
     font-family: 'Roboto', sans-serif;
     padding:20px 0;
     border-bottom: solid 1px #e6e6e6;
@@ -1108,13 +1143,13 @@ form label {
     font-family: 'Libre Franklin', sans-serif;
 }
 
-.articles .featured-articles {
+/* .articles .featured-articles {
     display: flex;
     flex-wrap: wrap;
-}
+} */
 
 .articles .featured-article {
-    flex: 1 0 48%;
+    /* flex: 1 0 48%; */
     margin-top: 16px;
 }
 
@@ -1248,6 +1283,17 @@ form label {
         left: 0;
         top: -69px;
     }
+
+    /* grid */
+
+    .grid--featured-articles {
+        display: grid;
+        grid-template-columns: repeat(1,auto);
+    }
+
+    .grid--footer {
+        grid-template-columns: repeat(2, auto) !important;
+    }
 }
 
 @media screen and (max-width: 767px){
@@ -1321,14 +1367,14 @@ form label {
         margin: 0 8px;
     }
 
-    .category .category-articles, .latest-videos .latest-videos-list {
+    /* .category .category-articles, .latest-videos .latest-videos-list {
         justify-content: space-evenly;
     }
 
     .category .category-articles .category-article, .latest-videos .latest-videos-list .category-article--video  {
         width: 45%;
         padding-bottom: 16px;
-    }
+    } */
 
     .col-3-content .col-1 {
         border-right: none;
@@ -1489,6 +1535,11 @@ form label {
     .main-featured-article {
         padding: 8px 8px 40px;
     }
+
+    .grid--footer {
+        grid-template-columns: repeat(3, auto);
+        text-align: center;
+    }
 }
 
 @media screen and (min-width: 768px) and (max-width: 1279px){
@@ -1526,10 +1577,10 @@ form label {
         width: 100%;
     }
 
-    .category .category-articles .category-article, .latest-videos .latest-videos-list .category-article--video {
+    /* .category .category-articles .category-article, .latest-videos .latest-videos-list .category-article--video {
         width: 32%;
         padding-bottom: 16px;
-    }
+    } */
 
     .category .category-article figure, .latest-videos .latest-videos-list figure {
         width: 100%;
@@ -1602,6 +1653,13 @@ form label {
     }
 
     footer .top-footer {
-        margin: 20px;
+        margin: 20px 52px
+    }
+
+    /* grid */
+
+    .grid--footer {
+        grid-template-columns: repeat(3, auto);
+        text-align: center;
     }
 }
