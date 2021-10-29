@@ -27,13 +27,14 @@
         margin-bottom: 16px;
     }
 
-    p {
+    &--author {
         color: color(tertiary-red);
         font-size: font-size(label);
+        font-weight: 500;
     }
 
     &--date-posted {
-        color: coloor(gray-95);
+        color: color(gray-95);
         font-size: font-size(span);
         font-weight: font-weight(400);
     }
@@ -95,40 +96,4 @@
         width: 100%;
         height: 100%;
     }
-}
-
-.form {
-    background-color: color(primary-red);
-    color: color(white);
-    padding: 40px 20px;
-}
-
-form {
-    margin: 0 auto;
-    font-family: font-family(font-secondary);
-
-    label {
-        font-weight: font-weight(700);
-    }
-
-    .input {
-        display: flex;
-        margin-top: 16px;
-    }
-}
-
-.email-input {
-    height: 30px;
-    width: 425px;
-    border: none;
-}
-
-.btn-submit{
-    margin-left: 16px;
-    background-color: color(white);
-    color: color(gray-33);
-    border: none;
-    padding: 0 24px;
-    border-radius: 20px;
-    cursor: pointer;
 }
