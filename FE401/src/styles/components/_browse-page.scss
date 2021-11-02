@@ -1,0 +1,203 @@
+.tag {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    color: #fff;
+    background-color: #c71d1d;
+    padding: 8px 16px;
+    display: inline-block;
+
+    @include breakpoint(tablet) {
+        margin-left: 8px;
+    }
+}
+
+.main-featured-article {
+    font-family: font-family(font-article-title);
+    padding-bottom: 40px;
+    border-bottom: 1px solid color(gray-EE);
+
+    a {
+        text-decoration: none;
+    }
+}
+
+.featured {
+
+    .main-featured-image img{
+        width: 100%;
+        margin-bottom: 16px;
+    }
+
+    .featured--main-article-title {
+        font-weight: font-weight(500);
+        color: color(black);
+        text-decoration: none;
+        font-size: 30px;
+        margin-top: 0;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    &--main-article-author {
+        font-size: 12px;
+        color: #c71d1d;
+        margin-bottom: 0;
+    }
+
+    &--main-article-date-posted {
+        font-size: 12px;
+        color: #959595;
+        margin: 4px 0 0;
+    }
+}
+
+.articles {
+    margin: 40px 0 20px;
+    font-family: font-family(font-article-body);
+
+    .featured-article {
+        /* flex: 1 0 48%; */
+        margin-top: 16px;
+
+        @include breakpoint(tablet) {
+            flex: 100%;
+            padding: 8px;
+        }
+
+        a {
+            text-decoration: none;
+            color: #000;
+
+            &:visited {
+                color: #000;
+            }
+        }
+
+        &:nth-child(even) {
+            margin-left: 8px;
+
+            @include breakpoint(tablet) {
+                margin-left: 0;
+            }
+        }
+
+        figure img {
+            width: 100%;
+        }
+
+        .featured-article-title {
+            font-size: font-size(article-body);
+            color: color(black);
+            text-decoration: none;
+            font-weight: font-weight(500);
+            margin-bottom: 8px;
+            max-height: 100%;
+            height: 36px;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+
+        .featured-article-author {
+            font-family: font-family(font-article-title);
+            color: color(tertiary-red);
+            font-size: font-size(label);
+            margin: 0;
+        }
+
+        .featured-article-date {
+            font-family: font-family(font-article-title);
+            color: color(gray-95);
+            font-size: font-size(label);
+            margin:0;
+        }
+    }
+}
+
+.grid--featured-articles {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(38%,auto));
+
+    @include breakpoint(mobile) {
+        display: grid;
+        grid-template-columns: repeat(1,auto);
+    }
+}
+
+.story-article {
+    /* display: flex; */
+    font-family: font-family(font-article-body);
+    padding: 20px 0;
+    border-bottom: solid 1px color(gray-E6);
+    grid-template-columns: minmax(min-content,auto) minmax(min-content,1fr);
+
+    @include breakpoint(mobile) {
+        grid-template-columns: 1fr;
+    }
+    
+
+    figure img {
+        width: 228px;
+        height: 152px;
+
+        @include breakpoint(tablet) {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    .content {
+        margin-left: 16px;
+
+        @include breakpoint(tablet) {
+            margin: 0;
+        }
+
+        .story-article-title{
+            margin-top: 0;
+            font-size: 15px;
+            color: color(black);
+            text-decoration: none;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+
+        .story-article-author {
+            font-size: font-size(label);
+            color: color(tertiary-red);
+            margin-bottom: 4px;
+            font-family: font-family(font-article-body);
+            font-weight: font-weight(400);
+        }
+
+        .story-article-date {
+            font-size: font-size(label);
+            color: color(gray-95);
+            margin-bottom: 4px;
+            font-weight: font-weight(400);
+            font-family: font-family(font-article-title);
+            margin: 0;
+        }
+
+        .story-article-summary {
+            font-size: font-size(body);
+            color: color(gray-44);
+            font-weight: font-weight(400);
+        }
+    }
+
+    a {
+        @include breakpoint(tablet) {
+            width: 100%;
+        }
+    }
+}
+
+.article, .breadcrumbs {
+    padding: 8px;
+}
