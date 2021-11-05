@@ -1,0 +1,17 @@
+{
+  "name": "sass-bootstrap",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "clean": "rm -rf ./dist",
+    "build:sass": "npm run clean && node-sass src/styles/main.scss dist/styles/main.css",
+    "watch:sass": "node-sass -w src/styles/main.scss -o dist/styles"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^6.0.1"
+  }
+}
