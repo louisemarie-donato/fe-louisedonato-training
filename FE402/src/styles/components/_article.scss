@@ -5,7 +5,7 @@
         font-family: font-family(font-article-body);
         color: color(gray, light);
         font-size: font-size(body);
-        font-weight: font-weight(400);
+        
         text-decoration: none;
 
         &:hover {
@@ -36,7 +36,7 @@
     &--date-posted {
         color: color(gray, light);
         font-size: font-size(span);
-        font-weight: font-weight(400);
+        
     }
 }
 
@@ -68,10 +68,6 @@
         line-height: 1.5;
     }
 
-    b, strong {
-        font-weight: font-weight(700);
-    }
-
     .caption {
         text-align: center;
         margin-bottom: 20px;
@@ -79,7 +75,7 @@
         a{
             color: color(red, default);
             text-decoration: none;
-            font-weight: font-weight(500);
+            
         }
     }
 }

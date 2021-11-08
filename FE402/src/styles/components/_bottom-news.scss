@@ -251,7 +251,7 @@
 
             a{
                 font-size: font-size(featured-link);
-                font-weight: font-weight(600);
+                
                 color: color(other, white);
                 position: absolute;
                 bottom: 0;
@@ -306,16 +306,5 @@
 
     &:hover {
         text-decoration: underline;
-    }
-}
-
-.sticky {
-    top: auto;
-
-    @include breakpoint(desktop) {
-        width: 100%;
-        position: -webkit-sticky;
-        position: sticky;
-        top:0;
     }
 }

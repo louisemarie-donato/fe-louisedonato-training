@@ -1,4 +1,12 @@
-.container {
+// css custom variables
+.arrow {
+    --arrow-background-color: #{color(other, white)};
+    --arrow-color: #{color(gray, light)};
+}
+
+
+// base
+.l-container {
     max-width: 1280px;
     width: 100%;
     margin: 0 auto;
@@ -14,7 +22,6 @@ figure {
 }
 
 ul {
-    list-style: none;
     padding: 0;
     width:100%;
 
@@ -48,7 +55,7 @@ ul {
     }
     &--featured a {
         font-size: font-size(featured-link);
-        font-weight: font-weight(600);
+        
     }
 
     span {
@@ -65,7 +72,6 @@ ul {
     justify-content: space-between;
     align-items: flex-end;
     margin-bottom: 16px;
-    // margin: 8px;
 
     @include breakpoint(tablet) {
         margin: 8px 0;
@@ -73,7 +79,7 @@ ul {
 
     h2 {
         font-family: font-family(font-primary), sans-serif;
-        font-weight: font-weight(600);
+        
         font-size: font-size(title-heading);
         margin-bottom: 4px;
 
@@ -97,7 +103,6 @@ ul {
             }
         }
         h2 {
-            text-transform: uppercase;
             &:after{
                 background:transparent;
             }
@@ -106,13 +111,12 @@ ul {
 }
 
 h2 span {
-    @extend .cta;
+    color: color(red, secondary);
 }
 
 .cta {
     font-family: font-family(font-body);
     color: color(red, secondary);
-    font-weight: font-weight(600);
     padding-bottom: 8px;
     text-decoration: none;
 
@@ -124,12 +128,18 @@ h2 span {
         content: '\003E';
         padding: 0 0 0 8px
     }
+
+    &--none {
+        @include breakpoint(tablet) {
+            display: none;
+        }
+    }
 }
 
 .read-more {
     font-family: font-family(font-article-body), sans-serif;
     color: color(red, tertiary);
-    font-weight: font-weight(400);
+    
     padding-bottom: 8px;
     text-decoration: none;
     font-size: font-size(label);
@@ -139,3 +149,13 @@ h2 span {
     }
 }
 
+.is-sticky {
+    top: auto;
+
+    @include breakpoint(desktop) {
+        width: 100%;
+        position: -webkit-sticky;
+        position: sticky;
+        top:0;
+    }
+}

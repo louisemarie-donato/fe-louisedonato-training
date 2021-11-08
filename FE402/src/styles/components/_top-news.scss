@@ -3,6 +3,7 @@
     border-bottom: 2px solid color(gray, default);
 }
 
+// top row
 .top-row {
     display: flex;
     justify-content: space-between;
@@ -44,7 +45,6 @@
                 .playlist li {
                     padding: 8px;
                     font-size: 14px;
-                    font-weight: 400;
                     border-left: 2px solid color(gray, default);
                     margin-bottom: 4px;
 
@@ -52,7 +52,7 @@
                         background: color(red, secondary);
                         border-left: 2px solid color(red, secondary); 
                         color: color(other, white);
-                        font-weight: font-weight(600);
+                        
                     }
                 }
             }
@@ -75,7 +75,7 @@
         position: relative;
 
         .top-stories{
-            &__slider-image {
+            &--slider-image {
 
                 figure {
                     margin: 0;
@@ -87,7 +87,7 @@
                 }
             }
 
-            &__slider-content {
+            &--slider-content {
                 position: absolute;
                 left: 0;
                 right: 0;
@@ -98,7 +98,7 @@
 
                 h2 {
                     font-size: font-size(article-heading);
-                    font-weight: font-weight(600);
+                    
                     margin: 8px 0 0 0;
                 }
 
@@ -128,14 +128,14 @@
     width: 40px;
     height: 40px;
     border: 1px solid color(gray, light); 
-    color: color(gray, light);
+    color: var(--arrow-color);
     font-size: font-size(tag);
     margin-bottom: 4px;
-     background-image: linear-gradient(180deg,color(other, white),color(other, white));
+    background: var(--arrow-background-color);
 
     &:hover {
-        background: color(red, secondary);
-        color: color(other, white);
+        --arrow-background-color: #{color(red, secondary)};
+        --arrow-color: #{color(other, white)};
     }
 }
 
@@ -355,7 +355,7 @@
     font-family: 'Source Sans Pro',sans-serif;
     color: color(other,white);
     font-size: font-size(label);
-    font-weight: font-weight(400);
+    
     text-transform: uppercase;
     position: absolute;
     background: color(red, secondary);
@@ -517,10 +517,10 @@
 .col-3-content {
     margin: 0 8px;
 
-     @include breakpoint(tablet) {
-         margin: 0;
-         width: 100%;
-     }
+    @include breakpoint(tablet) {
+        margin: 0;
+        width: 100%;
+    }
 
     .col .with-thumbnail {
         display: flex;
@@ -542,7 +542,7 @@
     
         a{
             color: color(red, secondary);
-            font-weight: font-weight(600);
+            
             margin: 20px 0;
             padding: 0;
     
