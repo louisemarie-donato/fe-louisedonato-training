@@ -1,0 +1,127 @@
+.form {
+    background: color(red, default);
+    color: color(other,white);
+    padding: 40px 20px;
+}
+
+form {
+    margin: 0 auto;
+    font-family: font-family(font-secondary), sans-serif;
+
+    .input {
+        display: flex;
+        margin-top: 16px;
+        flex-direction: column;
+
+        @include breakpoint(tablet) {
+            flex-direction: row;
+        }
+    }
+}
+
+.email-input {
+    height: 30px;
+    border: none;
+
+    @include breakpoint(tablet) {
+        width: 425px;
+    }
+}
+
+.btn-submit{
+    background: color(other,white);
+    color: color(gray, dark);
+    border: none;
+    margin-top: 16px;
+    padding: 12px 24px;
+    border-radius: 20px;
+    cursor: pointer;
+    align-self: flex-start;
+
+    @include breakpoint(tablet) {
+        margin-left: 16px;
+        margin-top: 0;
+    }
+}
+
+.grid-comments {
+    @include grid(12, 1fr);
+}
+
+.user img {
+    width: 50px;
+    height: 50px;
+    border: 1px solid transparent;
+    border-radius: 50%;
+}
+
+.comments {
+    .comment {
+        @include get-col(2, 11);
+    }
+}
+
+.comment-section {
+    margin-top: 20px;
+    padding-top: 20px;
+    padding: 20px 8px 8px 8px;
+    border-top: 1px solid color(other,black);
+
+    h3 {
+        font-family: font-family(font-secondary), sans-serif;
+        margin-top: 0;
+    }
+}
+
+.comment-form {
+    margin-bottom: 20px;
+    display: flex;
+
+    form {
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+        margin-left: 16px;
+    }
+
+    textarea {
+        font-family: font-family(font-article-title), sans-serif;
+        padding: 8px;
+        width: 92%;
+
+        @include breakpoint(tablet) {
+            width: 95%;
+        }
+        @include breakpoint(desktop) {
+            width: auto;
+        }
+    }
+}
+
+.submit-comment {
+    background: color(gray, dark);
+    color: color(other,white);
+    border: none;
+    padding: 16px 24px;
+    border-radius: 20px;
+    cursor: pointer;
+    align-self: flex-end;
+    margin-top: 8px;
+    font-family: font-family(font-article-title), sans-serif;
+}
+
+.comments {
+    font-family: 'Roboto', sans-serif;
+    padding:20px 0;
+    border-bottom: solid 1px color(gray, light);
+    align-items: center;
+
+    .comment {
+        margin-left: 16px;
+    }
+
+    .user-name {
+        font-weight: 500;
+        margin: 0 0 4px;
+    }
+}

@@ -1,0 +1,41 @@
+@function color($color, $key) {
+    $first: map-get($colors, $color);
+
+    @if map-has-key($colors, $color) {
+        @return map-get(map-get($colors, $color), $key);
+    } @else {
+        @error '$color not available in $colors';
+        @return null;
+    }
+}
+
+@function font-family($font-family) {
+    @if map-has-key($font-families, $font-family) {
+        @return map-get($font-families, $font-family);
+    } @else {
+        @error '$font-family not available in $font-families';
+        @return null;
+    }
+}
+
+@function font-size($font-size) {
+    @if map-has-key($font-sizes, $font-size) {
+        @return map-get($font-sizes, $font-size);
+    } @else {
+        @error '$font-size not available in $font-sizes';
+        @return null;
+    }
+}
+
+@function font-weight($font-weight) {
+    @if map-has-key($font-weights, $font-weight) {
+        @return map-get($font-weights, $font-weight);
+    } @else {
+        @error '$font-weight not available in $font-weights';
+        @return null;
+    }
+}
+
+@function get-breakpoint($breakpoint) {
+    @return map-get($breakpoints, $breakpoint);
+}
