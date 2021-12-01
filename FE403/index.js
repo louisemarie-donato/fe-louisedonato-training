@@ -3,6 +3,7 @@ const cards = document.querySelectorAll('.card');
 let hasFlippedCard = false;
 let firstCard, secondCard;
 let matchedCard = document.getElementsByClassName("match");
+let restart_btn = document.getElementById('restart');
 
 function shuffleDeck() {
     cards.forEach(card =>
@@ -69,7 +70,6 @@ function ifMatch() {
 }
 
 function restart() {
-    let restart_btn = document.getElementById('restart');
     console.log(matchedCard);
     if (matchedCard.length === 16){
         console.log('all match')
@@ -79,7 +79,12 @@ function restart() {
 }
 
 function restartGame() {
-    location.reload();
+    cards.forEach(card => card.classList.remove('flipped'));
+    cards.forEach(card => card.classList.remove('match'));
+    reset();
+    shuffleDeck();
+    console.log('restart');
+    restart_btn.style.display = "none";
 }
 
 console.log(matchedCard);
